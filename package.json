@@ -5,13 +5,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
-    "vite": "^5.2.10"
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-plugin-dts": "^3.9.0"
+  },
+  "dependencies": {
+    "vscode-uri": "^3.0.8"
   }
 }
