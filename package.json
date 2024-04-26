@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "fp-ts": "^2.16.5",
+    "jszip": "^3.10.1",
     "tslib": "^2.3.0",
     "vscode-uri": "^3.0.8"
   }
