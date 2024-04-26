@@ -1,6 +1,7 @@
 import { URI } from 'vscode-uri';
 import { Either, left, isLeft } from 'fp-ts/lib/Either';
 import { default as JSZip } from 'jszip';
+import { dependencyA } from '@org/dependencyA';
 
 console.log('Start testing some scenarios...');
 
@@ -16,4 +17,8 @@ console.log(
 
 const jszip = JSZip();
 console.log('Instantiating a default import: ' + jszip.name);
-// Replace `import * as JSZip from 'jszip';` with `import { default as JSZip } from 'jszip';`
+// Learning: replace `import * as JSZip from 'jszip';` with `import { default as JSZip } from 'jszip';`
+
+const dependencyResult = dependencyA();
+console.log('Importing library nia nx typescript path: ' + dependencyResult);
+// Learning: default config works fine
