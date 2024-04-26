@@ -6,34 +6,19 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "platform": "node",
         "outputPath": "dist/apps/app",
-        "format": ["esm"],
-        "bundle": false,
-        "main": "apps/app/src/main.ts",
-        "tsConfig": "apps/app/tsconfig.app.json",
-        "assets": ["apps/app/src/assets"],
-        "generatePackageJson": true,
-        "esbuildOptions": {
-          "sourcemap": true,
-          "outExtension": {
-            ".js": ".js"
-          }
-        }
+        "outputFileName": "main.js"
       },
       "configurations": {
-        "development": {},
+        "development": {
+          "mode": "development"
+        },
         "production": {
-          "esbuildOptions": {
-            "sourcemap": false,
-            "outExtension": {
-              ".js": ".js"
-            }
-          }
+          "mode": "production"
         }
       }
     },
