@@ -1,5 +1,6 @@
 cache
 .vscode
+*.db
 
 # compiled output
 dist

@@ -1,5 +1,6 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
+import esmShim from '@rollup/plugin-esm-shim';
 
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
@@ -19,15 +20,22 @@ export default defineConfig({
     emptyOutDir: true,
     reportCompressedSize: true,
 
+    sourcemap: true,
+
     commonjsOptions: {
       transformMixedEsModules: true,
     },
-
 
     lib: {
       entry: 'src/main.ts',
       fileName: 'main',
       formats: ['es'],
+    },
+
+    rollupOptions: {
+      plugins: [
+        esmShim(),
+      ],
     },
   },
 });

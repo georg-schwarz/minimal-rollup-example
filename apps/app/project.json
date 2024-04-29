@@ -14,9 +14,6 @@
         "outputFileName": "main.js"
       },
       "configurations": {
-        "development": {
-          "mode": "development"
-        },
         "production": {
           "mode": "production"
         }
@@ -24,14 +21,11 @@
     },
     "start": {
       "executor": "@nx/js:node",
-      "defaultConfiguration": "development",
+      "defaultConfiguration": "production",
       "options": {
         "buildTarget": "app:build"
       },
       "configurations": {
-        "development": {
-          "buildTarget": "app:build:development"
-        },
         "production": {
           "buildTarget": "app:build:production"
         }

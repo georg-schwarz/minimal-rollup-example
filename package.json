@@ -14,10 +14,12 @@
     "@nx/vite": "^18.3.4",
     "@nx/web": "18.3.4",
     "@nx/workspace": "18.3.4",
+    "@rollup/plugin-esm-shim": "0.1.6",
     "@swc-node/register": "~1.8.0",
     "@swc/core": "~1.3.85",
     "@swc/helpers": "~0.5.2",
     "@types/node": "~18.16.9",
+    "@types/sqlite3": "^3.1.11",
     "@typescript-eslint/eslint-plugin": "^7.3.0",
     "@typescript-eslint/parser": "^7.3.0",
     "@vitest/ui": "^1.3.1",
@@ -33,6 +35,7 @@
   "dependencies": {
     "fp-ts": "^2.16.5",
     "jszip": "^3.10.1",
+    "sqlite3": "^5.1.7",
     "tslib": "^2.3.0",
     "vscode-uri": "^3.0.8"
   }
